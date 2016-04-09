@@ -7,9 +7,5 @@ ApplicationWindow {
     height: 480
     title: qsTr("Tic-tac-toe")
 
-    Board
-    {
-        id: brd_board
-
-    }
+    Board{}
 }

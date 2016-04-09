@@ -6,7 +6,8 @@ Rectangle {
 
     property bool playerX: true
     property bool set: false
-    property bool value: true
+    property int value: 0
+    property bool paused: false
 
     signal clicked
 
@@ -35,9 +36,9 @@ Rectangle {
     MouseArea{
         anchors.fill: root
         onClicked: {
-            if(!set)
+            if(!set && !paused)
             {
-                value = playerX;
+                value = 2 - playerX;
 
                 if(playerX)
                     img_x.visible = true;
